@@ -26,8 +26,7 @@ ionic serve
 
 Eigene `config/config.json` lokal aus `config/config.example.json` ableiten, nicht committen.
 
-**## Heute gemacht**
-
+## Heute gemacht
 Heute habe ich das Node.js-Projekt mit Sequelize und MySQL eingerichtet, die sechs Modelle mit Migrationen erstellt und die Primär- und Fremdschlüssel sowie den Unique-Constraint eingerichtet.
 Danach habe ich die Migrationen ausgeführt, Beispieldaten in die Tabellen eingefügt, Screenshots vorbereitet und das Projekt mit Git auf GitHub gepusht.
 
@@ -85,9 +84,8 @@ Danach habe ich die Migrationen ausgeführt, Beispieldaten in die Tabellen einge
 
 <hier eintragen, was noch fehlt oder bekannt fehlerhaft ist>
 
-**## Git**
-\- [x] \`.gitignore\` erstellt
+## Git
 
-\- [x] Änderungen committed und zu GitHub gepusht
-
-\- [x] Git-Tag \`lab2\` erstellt und zu GitHub gepusht
+- [] \gitignore\ erstellt
+- [] Änderungen committed und zu GitHub gepusht
+- [] Git-Tag \lab2\ erstellt und zu GitHub gepusht
