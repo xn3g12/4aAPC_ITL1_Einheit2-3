@@ -86,6 +86,8 @@ Danach habe ich die Migrationen ausgeführt, Beispieldaten in die Tabellen einge
 <hier eintragen, was noch fehlt oder bekannt fehlerhaft ist>
 
 **## Git**
-- [] \`.gitignore\` erstellt
-- [] Änderungen committed und zu GitHub gepusht
-- [] Git-Tag \`lab2\` erstellt und zu GitHub gepusht
+\- [x] \`.gitignore\` erstellt
+
+\- [x] Änderungen committed und zu GitHub gepusht
+
+\- [x] Git-Tag \`lab2\` erstellt und zu GitHub gepusht
