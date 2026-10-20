@@ -1,18 +1,28 @@
+
 'use strict';
-const {
-  Model
-} = require('sequelize');
+
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Evaluation extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
+      // Eine Bewertung gehört zu einem Projekt.
+      Evaluation.belongsTo(models.Project, {
+        foreignKey: 'projectId'
+      });
+
+      // Eine Bewertung gehört zu einem Kriterium.
+      Evaluation.belongsTo(models.Criterion, {
+        foreignKey: 'criterionId'
+      });
+
+      // Eine Bewertung gehört zu einem Juror.
+      Evaluation.belongsTo(models.Juror, {
+        foreignKey: 'jurorId'
+      });
     }
   }
+
   Evaluation.init({
     projectId: DataTypes.INTEGER,
     criterionId: DataTypes.INTEGER,
@@ -23,5 +33,6 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Evaluation',
   });
+
   return Evaluation;
 };

@@ -1,18 +1,24 @@
+
 'use strict';
+
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Criterion extends Model {
     /**
      * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
+     * The models/index.js file calls this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Ein Kriterium kann mehrere Bewertungen haben.
+      Criterion.hasMany(models.Evaluation, {
+        foreignKey: 'criterionId'
+      });
     }
   }
+
   Criterion.init({
     name: DataTypes.STRING,
     maxScore: DataTypes.INTEGER,
@@ -21,5 +27,6 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Criterion',
   });
+
   return Criterion;
 };
